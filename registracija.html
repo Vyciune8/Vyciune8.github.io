@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nulaužk mane</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: crimson;
+            background-color: black;
+            margin: 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        button, a{
+            padding: 5px;
+            background-color: crimson;
+            color: black;
+            margin-left: auto;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function onClickButton(e){
+            let elem= document.getElementById('registracija');
+            localStorage.setItem('Vardas', elem.value);
+            window.location.href='/lygis1.html'
+
+        }
+    </script>
+</head>
+
+<body>
+<h1>Registracija</h1>
+<div>
+    <p>Iveskite savo vardą:</p>
+    <input type="text" id="registracija"><br><br>
+
+</div>
+<div>
+    <button onclick="onClickButton()">Pradėti</button>
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+</html>

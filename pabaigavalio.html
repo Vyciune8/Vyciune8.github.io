@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pabaiga</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: crimson;
+            background-color: black;
+            margin: 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        button,
+        a {
+            padding: 5px;
+            background-color: crimson;
+            color: black;
+            margin-left: auto;
+            margin-top: 10px;
+        }
+
+        .conteiner {
+            margin-top: 20px;
+        }
+
+        area {
+            cursor: default;
+        }
+    </style>
+    <script>
+        function loadLeaderboard()
+        {
+            const leaderboardString = localStorage.getItem('leaderboard');
+            let json  = JSON.parse(leaderboardString)
+
+            if(!json)
+            {
+                json = [];
+            }
+
+            let elem = document.getElementById('leaderboard');
+            let leaderboardStringHTML = '';
+            for(let i = 0; i < json.length; i++)
+            {
+                leaderboardStringHTML += json[i] + '<br>';
+            }
+
+            elem.innerHTML = leaderboardStringHTML
+        }
+    </script>
+
+</head>
+
+<body onload="loadLeaderboard()">
+    <h1> Pabaiga! </h1>
+    <div>
+        <p>
+            Sveikinu perėjus šį žaidimą!
+        </p>
+        <p>
+            Šį žaidimą yra įveikę:
+        </p>
+    </div>
+</body>
+
+</html>

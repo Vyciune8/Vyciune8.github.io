@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 lygis</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: crimson;
+            background-color: black;
+            margin: 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        button,
+        a {
+            padding: 5px;
+            background-color: crimson;
+            color: black;
+            margin-left: auto;
+            margin-top: 10px;
+        }
+
+        .conteiner {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function onClickButton(e) {
+            let elem = document.getElementById('slaptažodis');
+            let slaptažodis = elem.value;
+            if (slaptažodis === 'sygrhvzisezifov') {
+                window.location.href= atob('L2x5Z2lzMy5odG1s');
+
+            }
+            else {
+                alert('slaptažodis neteisingas');
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1> Lygis 2</h1>
+    <div>
+        <p>Iveskite slaptažodį</p>
+        <input type="password" id="slaptažodis"><br><br>
+    </div>
+    <div>
+        <button onclick=" onClickButton()">Testi</button>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
